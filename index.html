@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Luma Motion — interactive slider patterns for React and vanilla JavaScript." />
+    <title>Luma Motion — Slider library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Luma Motion home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>luma<span class="brand-dot">.</span><b>motion</b></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#library">Library</a>
+          <a href="#docs">Docs</a>
+          <a href="#changelog">Changelog <span class="new-pill">NEW</span></a>
+        </nav>
+        <div class="top-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme">☼</button>
+          <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        </div>
+      </header>
+
+      <main id="library">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> INTERACTION, MADE VISIBLE</div>
+            <h1>Give your<br />interface <em>rhythm.</em></h1>
+            <p>Play with expressive, production-ready sliders before you ship. Drag, swipe, copy, and make them yours.</p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="#explore">Explore sliders <span>↓</span></a>
+              <a class="text-btn" href="#docs">Read the docs <span>↗</span></a>
+            </div>
+          </div>
+          <div class="hero-orbit" aria-label="Decorative interactive slider preview">
+            <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div>
+            <div class="orbit-glow"></div>
+            <div class="orbit-card card-back">07<br /><small>CHAPTER</small></div>
+            <div class="orbit-card card-front"><small>FEATURED</small><strong>Infinite<br /><span>possibilities.</span></strong><b>✦</b></div>
+            <div class="orbit-label">DRAG TO EXPLORE <span>↗</span></div>
+          </div>
+        </section>
+
+        <section class="library-section" id="explore">
+          <div class="section-heading">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</div><h2>Find your <em>flow.</em></h2></div>
+            <div class="heading-meta"><span>08 COMPONENTS</span><span class="meta-divider"></span><span>UPDATED OCT 2024</span></div>
+          </div>
+          <div class="toolbar">
+            <div class="filters" role="tablist" aria-label="Filter sliders">
+              <button class="filter active" data-filter="all">All sliders <span>08</span></button>
+              <button class="filter" data-filter="3d">3D &amp; depth <span>03</span></button>
+              <button class="filter" data-filter="minimal">Minimal <span>02</span></button>
+              <button class="filter" data-filter="content">Content <span>03</span></button>
+            </div>
+            <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search components..." /></label>
+          </div>
+          <div class="slider-grid" id="sliderGrid"></div>
+        </section>
+
+        <section class="playground" id="playground">
+          <div class="playground-heading">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> PLAYGROUND</div><h2>Make it <em>yours.</em></h2></div>
+            <div class="selected-name"><span class="live-dot"></span><span id="selectedType">LIVE PREVIEW</span></div>
+          </div>
+          <div class="workbench">
+            <div class="preview-pane">
+              <div class="pane-top"><span><i class="window-dot"></i><i class="window-dot"></i><i class="window-dot"></i></span><span class="pane-label">PREVIEW / <b id="previewName">AURORA</b></span><span class="viewport-label">RESPONSIVE <span>⌁</span></span></div>
+              <div class="preview-stage" id="previewStage"></div>
+            </div>
+            <div class="code-pane">
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-tab="code">Code</button>
+                <button class="code-tab" data-tab="usage">How to use</button>
+                <button class="code-tab" data-tab="props">Props</button>
+              </div>
+              <div class="code-body" id="codeBody"></div>
+              <div class="code-footer"><span id="codeLanguage">VANILLA JS · CSS</span><button class="copy-btn" id="copyCode">Copy code <span>▣</span></button></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="principles" id="docs">
+          <div class="principles-intro"><div class="eyebrow"><span class="eyebrow-line"></span> BUILT FOR THE WEB</div><h2>Good motion<br />feels <em>natural.</em></h2><p>Every Orbit component is accessible, performant, and designed to disappear into your product.</p><a class="text-btn" href="#docs">Explore documentation <span>↗</span></a></div>
+          <div class="principle-list">
+            <article><span class="principle-number">01</span><div><h3>Designed to adapt</h3><p>Fluid by default. Every slider feels right on a phone, tablet, or desktop.</p></div><span class="principle-icon">↗</span></article>
+            <article><span class="principle-number">02</span><div><h3>Accessible at the core</h3><p>Keyboard navigation, reduced motion, and semantic markup come standard.</p></div><span class="principle-icon">↗</span></article>
+            <article><span class="principle-number">03</span><div><h3>Yours to customize</h3><p>No black boxes. Clean code and thoughtful defaults that are easy to extend.</p></div><span class="principle-icon">↗</span></article>
+          </div>
+        </section>
+      </main>
+      <footer>      <footer><a class="brand" href="#"><span class="brand-mark"><i></i><i></i><i></i></span><span>luma<span class="brand-dot">.</span><b>motion</b></span></a><span>Made for better interfaces <span class="footer-star">✦</span></span><span>© 2024 Luma Motion</span></footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
